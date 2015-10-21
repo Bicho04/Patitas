@@ -1,0 +1,192 @@
+.home-wrap
+  // flex: 1
+  
+.home-sections
+  
+  section
+    padding: 50px 0
+
+
+
+  // Flex Classes
+  .flex
+    display: flex
+
+  .flex--center
+    justify-content: center
+
+  .flex--space-around
+    justify-content: space-around
+
+  .order-first
+    order: -1
+
+
+
+// columns
+.col-1
+  max-width: 300px
+  margin: 0 10px
+
+.col-2
+  max-width: 620px
+  margin: 0 10px
+
+.col-50
+  width: 50%
+
+.push-right
+  margin-left: 330px
+
+@media (max-width: 640px)
+  .home-sections .flex
+    display: block
+
+  .col-1
+    max-width: 100%
+
+  .col-50
+    width: auto
+
+  .push-right
+    margin-left: 10px
+
+
+
+// Typography
+
+.home-lead
+  font-size: 36px
+  line-height: 1.1
+
+  &.outdented
+    text-indent: -0.75em
+
+    @media (max-width: 640px)
+      text-indent: 0
+
+
+// Graficos
+.graficos
+  position: absolute
+  bottom: 0
+  height: 62vh
+  width: 100vw
+  z-index: -1
+
+  .parque
+    position: relative
+    height: 62vh
+
+    //- PASTO FONDO 
+    &-pasto
+      position: absolute
+      top: -33px
+      width: 100%
+      height: 50%
+      z-index: 1
+
+    &-vereda
+      position: absolute
+      bottom: 0
+      width: 100%
+      height: 36vh
+      z-index: 1
+      // background: rgba(0,255,0,0.2)
+
+    //- ELEMENTOS
+    .arbol
+      width: 15em
+      height: 20em
+      background: 
+        color: transparent
+        image: url(../img/parque-arbol.png) 
+        position: 0 0 
+        repeat: no-repeat
+        size: 100%
+      transform: translate(0, 0)
+      opacity: 1
+
+    .banco
+      width: 23em
+      height: 11.88em
+      background: 
+        color: transparent 
+        image: url(../img/parque-banco.png) 
+        position: 0 0 
+        repeat: no-repeat
+        size: 100%
+      transform: translate(0, 0)
+      opacity: 1
+
+    .perrito
+      width: 7.5em
+      height: 5.62em
+      background: 
+        color: transparent 
+        image: url(../img/perrito.png) 
+        position: 100% 100% 
+        repeat: no-repeat
+        size: 200%
+      transform: translate(0, 0)
+      opacity: 1
+
+    .candelabro
+      width: 5em
+      height: 25em
+      background: 
+        color: transparent 
+        image: url(../img/parque-candelabro.png) 
+        position: 0 0
+        repeat: no-repeat
+        size: 100%
+      transform: translate(0, 0)
+      opacity: 1
+
+    .voluntario
+      width: 11.5em
+      height: 24em
+      background: 
+        color: transparent
+        image: url(../img/voluntario.png) 
+        position: 0 0
+        repeat: no-repeat
+        size: 34em 
+      transform: translate(0, 0)
+      opacity: 1
+
+    .familia
+      width: 14em
+      height: 25em
+      background:
+        color: transparent 
+        image: url(../img/familia.png) 
+        position: 0 0 
+        repeat: no-repeat
+        size: 100%
+      transform: translate(0, 0)
+      opacity: 1
+
+    .nene
+      width: 10em
+      height: 15em
+      background: 
+        color: transparent 
+        image: url(../img/nene.png) 
+        position: 0 0 
+        repeat: no-repeat
+        size: 100%
+      transform: translate(0, 0)
+      opacity: 1
+  
+    .plato
+      width: 5em
+      height: 3em
+      background: 
+        color: transparent 
+        image: url(../img/platoDeComida.png) 
+        position: 0 0 
+        repeat: no-repeat
+        size: 100%
+      transform: translate(0, 0)
+      opacity: 1

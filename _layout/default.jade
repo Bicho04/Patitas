@@ -1,0 +1,29 @@
+doctype html
+html(lang='Es-Py')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    block title
+      title Club Data | Club de Beneficios
+
+    meta(name='description', content='Club de Beneficios')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet', href='assets/css/main.css')
+
+  body
+    <!--[if lt IE 8]>
+    p.browserupgrade.
+      Estas usando un nevegador <strong>viejo</strong>.
+      Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> para mejorar tu experiencia.
+    <![endif]-->
+
+    block body
+    
+    script(type='text/javascript',src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+    script(type="text/javascript",src="assets/js/jquery.touchSwipe.js")
+    script(type="text/javascript",src="assets/js/jquery.horizonScroll.js")
+    script(type="text/javascript",src="assets/js/functions.js")
+    script(type="text/javascript")
+      $('section').horizon();

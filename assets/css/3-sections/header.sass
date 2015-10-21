@@ -1,0 +1,41 @@
+.home-wrap
+  z-index: 10
+  position: relative
+  header
+  .logo
+    h1
+      position: absolute
+      top: -900px
+  
+  nav.site-nav
+    box-sizing: border-box
+    position: fixed
+    text-align: center
+    width: 100%
+    
+    ul 
+      display: flex
+      list-style-type: none
+      margin: auto
+      padding: 0
+      min-width: 670px
+      max-width: 980px
+      background-position: 0 0
+      flex-direction: row
+      justify-content: space-between
+      li 
+        text-align: center
+        flex-grow: 1
+        white-space: nowrap
+        a 
+          color: #ffffff
+          display: block
+          font-size: 1.3em
+          line-height: 3em
+          text-align: center
+          text-shadow: 1px 1px 5px #111
+          font-weight: 400
+          &:hover
+            font-weight: 800
+            text-shadow: 1px 1px 5px #fff
+            color: orange

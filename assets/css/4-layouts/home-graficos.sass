@@ -1,0 +1,109 @@
+.home-graficos
+	height: 100vh
+	width: 600vw
+	position: absolute
+	top: 0
+	left: 0
+	z-index: -1
+	//- CIELO NUVEs Y CIUDAD
+	.cielo
+		position: relative
+		height: 38vh
+		z-index: -1
+		background: #8DCEFD
+		// @include linear-gradient(to bottom, #7FBDE9, white)
+		//- NUVES	
+		&-nuves1
+			position: absolute
+			width: 150vw
+			height: 100%
+			background:
+				color: transparent
+				image: url(../img/cielo-nuves1.png)
+				repeat: repeat-x
+				size: 100vh
+		&-nuves2
+			position: absolute
+			width: 150vw
+			height: 100%
+			background:
+				color: transparent
+				image: url(../img/cielo-nuves2.png)
+				repeat: repeat-x
+				size: 100vh
+		//- CIUDAD
+		&-ciudad
+			position: absolute
+			width: 200vw
+			height: 100%
+			background:
+				color: transparent
+				image: url(../img/cielo-ciudad.png)
+				repeat: repeat-x
+				size: 100vh
+	//- PARQUE
+	.parque
+		position: relative
+		height: 62vh
+		width: 600vw
+		background: #7AA52A
+		//- PASTO FONDO 
+		&-pasto
+			position: absolute
+			top: 0
+			width: 550vw
+			height: 100%
+			z-index: 1
+			background:
+				color: transparent
+			//- PASTO ARBOLES
+			&-arboles
+				position: absolute
+				top: -32px
+				left: 0
+				width: 200vw
+				height: 100%
+				z-index: 1
+				background:
+					color: transparent
+					image: url(../img/parque-fondo.png)
+					repeat: repeat-x
+					size: 100vh
+			//- PASTO MEDIO
+			&-frente
+				position: absolute
+				top: 5vh
+				width: 450vw
+				height: 100%
+				z-index: 2
+				background:
+					color: transparent
+					image: url(../img/parque-pastoFrente.png)
+					repeat: repeat-x
+					size: 100vh
+			//- PASTO FRENTE
+			&-medio
+				position: absolute
+				top: 15vh
+				left: -10vw
+				width: 560vw
+				height: 100%
+				z-index: 3
+				background:
+					color: transparent
+					image: url(../img/parque-pastoMedio.png)
+					repeat: repeat-x
+					size: 100vh
+		//- VEREDA
+		&-vereda
+			position: absolute
+			bottom: 0
+			width: 100%
+			height: 36vh
+			@include background-image (url(../img/parque-cordon.png),linear-gradient(to bottom, #B3CD4C 5%,#666 5%, #555))
+			z-index: 1
+			background:
+				repeat: repeat-x
+				size: 3vh ,100%
+
+
