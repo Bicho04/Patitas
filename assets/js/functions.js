@@ -60,6 +60,7 @@ $(window).scroll(function(){
 
 
 // Clicks en el menu
+$('section').horizon();
 
 $("header").on('click', '#patitas', function() {
   
