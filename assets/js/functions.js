@@ -80,13 +80,13 @@ $("header").on('click', '#consejosUtiles', function() {
 
 });
 
-$("header").on('click', '#eventos', function() {
+$("header").on('click', '#colaboraConNosotros', function() {
   
   $(document).horizon('scrollTo', 3);
 
 });
 
-$("header").on('click', '#colaboraConNosotros', function() {
+$("header").on('click', '#eventos', function() {
   
   $(document).horizon('scrollTo', 4);
 
@@ -96,4 +96,31 @@ $("header").on('click', '#contacto', function() {
   
   $(document).horizon('scrollTo', 5);
 
+});
+
+
+//MODAL
+$(function() {
+  $("#modal-1").on("change", function() {
+    if ($(this).is(":checked")) {
+      $("body").addClass("modal-open");
+    } else {
+      $("body").removeClass("modal-open");
+    }
+  });
+  $("#historia").on("change", function() {
+    if ($(this).is(":checked")) {
+      $("body").addClass("modal-open");
+    } else {
+      $("body").removeClass("modal-open");
+    }
+  });
+
+  $(".modal-fade-screen, .modal-close").on("click", function() {
+    $(".modal-state:checked").prop("checked", false).change();
+  });
+
+  $(".modal-inner").on("click", function(e) {
+    e.stopPropagation();
+  });
 });

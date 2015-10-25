@@ -1,13 +1,14 @@
-@import "0-tools/fonts";
 @import "0-tools/bourbon/bourbon";
 @import "0-tools/neat/neat";
 @import "0-tools/normalize";
 
 @import "1-base/vars";
 @import "1-base/base";
+@import "0-tools/fonts";
 
 @import "2-modules/buttons";
 @import "2-modules/flex-video";
+@import "2-modules/modal";
 
 @import "3-sections/header";
 @import "3-sections/home-patitas";
