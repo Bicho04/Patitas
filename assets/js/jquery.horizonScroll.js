@@ -126,25 +126,27 @@
         }
     };
 
-    var scrollLeft = function () {
-        // console.log('Scroll left');
+    //- Activar el scroll con el mouse
 
-        var i2 = $.fn.horizon.defaults.i - 1;
+    // var scrollLeft = function () {
+    //     // console.log('Scroll left');
 
-        if (i2 > -1) {
-            scrollTo(i2, $.fn.horizon.defaults.scrollDuration);
-        }
-    };
+    //     var i2 = $.fn.horizon.defaults.i - 1;
 
-    var scrollRight = function () {
-        // console.log('Scroll right');
+    //     if (i2 > -1) {
+    //         scrollTo(i2, $.fn.horizon.defaults.scrollDuration);
+    //     }
+    // };
 
-        var i2 = $.fn.horizon.defaults.i + 1;
+    // var scrollRight = function () {
+    //     // console.log('Scroll right');
 
-        if (i2 < $.fn.horizon.defaults.limit) {
-            scrollTo(i2, $.fn.horizon.defaults.scrollDuration);
-        }
-    };
+    //     var i2 = $.fn.horizon.defaults.i + 1;
+
+    //     if (i2 < $.fn.horizon.defaults.limit) {
+    //         scrollTo(i2, $.fn.horizon.defaults.scrollDuration);
+    //     }
+    // };
 
 // Executes on 'scrollbegin'.
     var scrollBeginHandler = function (delta) {
