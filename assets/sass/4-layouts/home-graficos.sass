@@ -9,7 +9,7 @@
 	//- CIELO NUVEs Y CIUDAD
 	.cielo
 		position: relative
-		height: $ancho-cielo
+		min-height: $ancho-cielo
 		z-index: -1
 		background: #8DCEFD
 		// @include linear-gradient(to bottom, #8DCEFD, lighten(#8DCEFD,5))
@@ -18,31 +18,34 @@
 		&-nuves2,
 		&-ciudad
 			position: absolute
-			width: 360vw
+			width:	600vw
 			height: $ancho-nuves
 			top: 5vh
 			background:
 				color: transparent
 				image: url(../img/cielo-nuves1.png)
 				repeat: repeat-x
-				size: 100vh
+				size: 40vw
 				position: 0 50%
 		&-nuves2
 			top: 20vh
 			background-image: url(../img/cielo-nuves2.png)
 		//- CIUDAD
 		&-ciudad
-			width: 350vw
+			width: 100%
 			height: $ancho-ciudad
 			background:
 				image: url(../img/cielo-ciudad.png)
 				position: 0 100%
+				size: auto 60%
 	//- PARQUE
 	.parque
 		position: relative
 		height: $ancho-parque
 		width: 600vw
 		background: #7AA52A
+		position: absolute
+		bottom: 0
 
 		//- PASTO y VEREDA
 		&-pasto,
@@ -54,7 +57,7 @@
 				repeat: repeat-x
 		//- PASTO FONDO 
 		&-pasto
-			width: 550vw
+			width: 100%
 			height: $ancho-pasto
 			//- PASTO ARBOLES
 			&-arboles,
@@ -63,7 +66,7 @@
 				position: absolute
 				top: -32px
 				left: 0
-				width: 385vw
+				width: 100%
 				height: $ancho-pasto
 				background:
 					color: transparent
@@ -77,16 +80,18 @@
 			//- PASTO MEDIO
 			&-frente
 				top: 1vh
-				width: 520vw
+				width: 100%
 				z-index: 2
 				background-image: url(../img/parque-pastoFrente.png)
 			//- PASTO FRENTE
 			&-medio
 				top: 8vh
-				left: -13vw
-				width: 586vw
+				width: 100%
 				z-index: 3
-				background-image: url(../img/parque-pastoMedio.png)
+				background:
+					image: url(../img/parque-pastoMedio.png)
+					position: -3% 0
+
 		//- VEREDA
 		&-vereda
 			width: 100%
@@ -97,99 +102,114 @@
 
 // GREFICOS
 .graficos
-  position: absolute
-  bottom: 0
-  height: $ancho-parque
-  width: 100vw
+	position: absolute
+	bottom: 0
+	height: $ancho-parque
+	width: 100vw
 
-  .parque
-    position: relative
-    height: $ancho-parque
+	.parque
+		position: relative
+		height: $ancho-parque
 
-    //- PASTO VEREDA
-    &-pasto,
-    &-vereda
-      position: relative
-      width: 100%
-      top: 0
+		// PASTO VEREDA
+		&-pasto,
+		&-vereda
+			position: relative
+			width: 100%
+			top: 0
 
-    //- PASTO
-    &-pasto
-      height: $ancho-pasto
-      z-index: -1
-      // @include background-image (linear-gradient(to left, rgba(125,251,35,0.6), rgba(125,20,35,0.6)))
-    
-    //- VEREDA
-    &-vereda
-      height: $ancho-vereda
-      // @include background-image (linear-gradient(to left, rgba(125,20,35,0.6), rgba(125,251,35,0.6)))
+		// PASTO
+		&-pasto
+			height: $ancho-pasto
+			z-index: -1
+			// @include background-image (linear-gradient(to left, rgba(125,251,35,0.6), rgba(125,20,35,0.6)))
+		
+		//- VEREDA
+		&-vereda
+			height: $ancho-vereda
+			// @include background-image (linear-gradient(to bottom, rgba(125,20,35,0.6), rgba(125,251,35,0.6)))
 
-    //- ELEMENTOS
-    
-    .arbol,
-    .banco,
-    .candelabro,
-    .familia,
-    .nene,
-    .perrito,
-    .plato,
-    .voluntario
-      background: 
-        color: transparent 
-        position: 0 0 
-        repeat: no-repeat
-        size: 100%
-      transform: translate(0,0)
-      transition: all 0.3s
-      opacity: 1
+		//- ELEMENTOS
+		
+		.arbol,
+		.banco,
+		.candelabro,
+		.familia,
+		.nene,
+		.perrito,
+		.plato,
+		.voluntario
+			background: 
+				color: transparent 
+				position: 50% 100% 
+				repeat: no-repeat
+				size: 100%
+			transform: translate(0,0)
+			transition: all 0.3s
+			opacity: 1
 
-    .arbol
-      width: 15em
-      height: 20em
-      background:
-        color: transparent
-        image: url(../img/parque-arbol.png) 
-      z-index: 0
+		.arbol
+			width: $arbol
+			height: $arbol / 0.94
+			background:
+				// color: green
+				image: url(../img/parque-arbol.png) 
+			z-index: 0
 
-    .banco
-      width: 23em
-      height: 11.88em
-      background-image: url(../img/parque-banco.png) 
-      background-size: 100%
+		.banco
+			width: $banco
+			height: $banco / 1.89
+			background:
+				// color: #ccc
+				image: url(../img/parque-banco.png) 
+				size: 100%
 
-    .candelabro
-      width: 5em
-      height: 25em
-      background-image: url(../img/parque-candelabro.png) 
+		.candelabro
+			width: $candelabro
+			height: $candelabro /  0.19
+			background:
+				// color: brown
+				image: url(../img/parque-candelabro.png) 
 
-    .familia
-      width: 14em
-      height: 25em
-      background-image: url(../img/familia.png) 
+		.voluntario
+			width: $voluntario
+			height: $voluntario / 0.50
+			background:
+				// color: orange
+				image: url(../img/voluntario.png)
+				size: 300% 100%
+				position: 0 100%
 
-    .nene
-      width: 10em
-      height: 15em
-      background-image: url(../img/nene.png) 
+		.familia
+			width: $familia
+			height: $familia / 0.58
+			background:
+				// color: orange
+				image: url(../img/familia.png) 
+				size: 100% 
 
-    .perrito
-      width: 7.4em
-      height: 5.95em
-      background:
-        image: url(../img/perrito.png) 
-        position: 100% 100% 
-        size: 200%
+		.nene
+			width: $nene
+			height: $nene / 0.69
+			background:
+				// color: blue
+				image: url(../img/nene.png) 
+				size: 100%
 
-    .plato
-      width: 5em
-      height: 3em
-      background-image: url(../img/platoDeComida.png) 
+		.perrito
+			width: $perrito
+			height: $perrito / 1.25
+			background:
+				// color: red
+				image: url(../img/perrito.png) 
+				position: 100% 100% 
+				size: 200%
 
-    .voluntario
-      width: 11.5em
-      height: 22.6em
-      background:
-        image: url(../img/voluntario.png)
-        size: 34em 
+		.plato
+			width: $plato
+			height: $plato / 2.15
+			background:
+				// color: cyan
+				image: url(../img/platoDeComida.png) 
 
 
