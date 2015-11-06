@@ -62,40 +62,32 @@ $(window).scroll(function(){
 // Clicks en el menu
 $('section').horizon();
 
-$("header").on('click', '#patitas', function() {
-  
+$("header").on('click', '#inicio', function() { 
   $(document).horizon('scrollTo', 0);
-
 });
 
-$("header").on('click', '#adopciones', function() {
-  
+$("header").on('click', '#patitas', function() { 
   $(document).horizon('scrollTo', 1);
+});
 
+$("header").on('click', '#adopciones', function() { 
+  $(document).horizon('scrollTo', 2);
 });
 
 $("header").on('click', '#consejosUtiles', function() {
-  
-  $(document).horizon('scrollTo', 2);
-
+  $(document).horizon('scrollTo', 3);
 });
 
 $("header").on('click', '#colaboraConNosotros', function() {
-  
-  $(document).horizon('scrollTo', 3);
-
+  $(document).horizon('scrollTo', 4);
 });
 
 $("header").on('click', '#eventos', function() {
-  
-  $(document).horizon('scrollTo', 4);
-
+  $(document).horizon('scrollTo', 5);
 });
 
 $("header").on('click', '#contacto', function() {
-  
-  $(document).horizon('scrollTo', 5);
-
+  $(document).horizon('scrollTo', 6);
 });
 
 
