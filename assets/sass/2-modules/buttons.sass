@@ -12,3 +12,34 @@
   &:hover
     box-shadow: 0px 5px 14px rgba(0,0,0,0.6)
     color: #e20a0a
+
+.boton.boton-hueso
+  $radio: 1.2em
+  color: white
+  position: relative
+  background: orange
+  display: inline-block
+  padding: 0.5em 1.2em
+  margin: 2em
+  line-height: $radio
+  &:after,
+  &:before
+    position: absolute
+    width: $radio * 2
+    height: $radio * 2
+    background: orange
+    z-index: -1
+    border-radius: 50%
+    box-shadow: 0 (($radio*0.7)*2) 0 0 orange
+    bottom: $radio*0.7
+    left: -$radio
+    content: '' 
+  &:before
+    right: -$radio
+    left: auto
+  &:hover
+    opacity: 0.85
+  &:active
+    transform: scale(0.95)
+    opacity: 1
+  

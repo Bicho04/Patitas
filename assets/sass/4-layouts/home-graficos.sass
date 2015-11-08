@@ -1,7 +1,7 @@
 //- FONDOS
 .home-graficos
 	height: 100vh
-	width: 100%
+	width: 700vw
 	position: absolute
 	top: 0
 	left: 0
@@ -18,32 +18,31 @@
 		&-nuves2,
 		&-ciudad
 			position: absolute
-			width:	200vw
+			width:	180vw
 			height: $ancho-nuves
 			top: 5vh
 			background:
 				color: transparent
-				image: url(../img/cielo-nuves1.png)
+				image: url(../img/Patitas_Nuves1.png)
 				repeat: repeat-x
-				size: 40vw
+				size: 70vw
 				position: 0 50%
 		&-nuves2
 			top: 20vh
-			background-image: url(../img/cielo-nuves2.png)
+			background-image: url(../img/Patitas_Nuves2.png)
 		//- CIUDAD
 		&-ciudad
 			width: 100%
 			height: $ancho-ciudad
 			background:
-				image: url(../img/cielo-ciudad.png)
+				image: url(../img/Patitas_Ciudad.png)
 				position: 0 100%
 				size: auto 60%
 	//- PARQUE
 	.parque
 		position: relative
-		height: $ancho-parque
 		width: 100%
-		background: #7AA52A
+		height: $ancho-parque
 		position: absolute
 		bottom: 0
 
@@ -64,39 +63,71 @@
 			&-frente,
 			&-medio
 				position: absolute
-				top: -32px
 				left: 0
 				width: 100%
 				height: $ancho-pasto
 				background:
 					color: transparent
 					repeat: repeat-x
-					size: 100vh auto 
 			//- PASTO ARBOLES
 			&-arboles
+				top: -$ancho-arboles
 				height: $ancho-arboles
 				z-index: 1
-				background-image: url(../img/parque-fondo.png)
+				background:
+					image: url(../img/Patitas_PastoFondo.png)
+					size: 100vw auto 
+				&:after
+					content: ''
+					background: #89C33F
+					height: 6vh
+					width: 100%
+					position: absolute
+					top: 100%
+					z-index: 1
+
 			//- PASTO MEDIO
-			&-frente
+			&-medio
 				top: 1vh
 				width: 100%
+				height: 2.5vw
 				z-index: 2
-				background-image: url(../img/parque-pastoFrente.png)
-			//- PASTO FRENTE
-			&-medio
-				top: 8vh
-				width: 100%
-				z-index: 3
 				background:
-					image: url(../img/parque-pastoMedio.png)
-					position: -3% 0
+					image: url(../img/Patitas_PastoMedio.png)
+					size: 45vw auto 
+				&:after
+					content: ''
+					background: #B1CB4C
+					height: 6vh
+					width: 100%
+					position: absolute
+					top: 100%
+					z-index: 1
+			//- PASTO FRENTE
+			&-frente
+				top: 5vh
+				width: 100%
+				height: 2.5vw
+				z-index: 3
+				padding: 0
+				background:
+					image: url(../img/Patitas_PastoFrente.png)
+					position: -7% 0
+					size: 40vw auto 
+				&:after
+					content: ''
+					background: #7AA529
+					height: 6vh
+					width: 100%
+					position: absolute
+					top: 100%
+					z-index: 1
 
 		//- VEREDA
 		&-vereda
 			width: 100%
 			height: $ancho-vereda
-			@include background-image (url(../img/parque-cordon.png),linear-gradient(to bottom, #B3CD4C 5%,#bbb 5%, #ccc))
+			@include background-image (url(../img/Patitas_Reja.png),linear-gradient(to bottom, #7AA529 5%,#bbb 5%, #ccc))
 			background-size: 2vh ,100%
 
 
@@ -153,7 +184,7 @@
 			height: $arbol / 0.94
 			background:
 				// color: green
-				image: url(../img/parque-arbol.png) 
+				image: url(../img/Patitas_Arbol.png) 
 			z-index: 0
 
 		.banco
@@ -161,7 +192,7 @@
 			height: $banco / 1.89
 			background:
 				// color: #ccc
-				image: url(../img/parque-banco.png) 
+				image: url(../img/Patitas_Banco.png) 
 				size: 100%
 
 		.candelabro
@@ -169,23 +200,23 @@
 			height: $candelabro /  0.19
 			background:
 				// color: brown
-				image: url(../img/parque-candelabro.png) 
+				image: url(../img/Patitas_Candelabro.png) 
 
 		.voluntario
 			width: $voluntario
 			height: $voluntario / 0.50
 			background:
 				// color: orange
-				image: url(../img/voluntario.png)
+				image: url(../img/Patitas_Voluntario.png)
 				size: 300% 100%
-				position: 0 100%
+				position: 100% 100%
 
 		.familia
 			width: $familia
 			height: $familia / 0.58
 			background:
 				// color: orange
-				image: url(../img/familia.png) 
+				image: url(../img/Patitas_Familia.png) 
 				size: 100% 
 
 		.nene
@@ -193,23 +224,30 @@
 			height: $nene / 0.69
 			background:
 				// color: blue
-				image: url(../img/nene.png) 
+				image: url(../img/Patitas_Nene.png) 
 				size: 100%
 
 		.perrito
 			width: $perrito
-			height: $perrito / 1.25
+			height: $perrito
 			background:
 				// color: red
-				image: url(../img/perrito.png) 
-				position: 100% 100% 
-				size: 200%
+				image: url(../img/Patitas_Perrito.png) 
+				size: 300% 100%
+				position: 0 100% 
+
+		.gatito
+			width: $gatito
+			height: $gatito
+			background:
+				// color: red
+				image: url(../img/Patitas_Gatito.png) 
 
 		.plato
 			width: $plato
 			height: $plato / 2.15
 			background:
 				// color: cyan
-				image: url(../img/platoDeComida.png) 
+				image: url(../img/Patitas_Plato.png) 
 
 

@@ -4,7 +4,6 @@ var pContainerWidth = $('.home-graficos').width();
 
 $(window).scroll(function(){
 
-
   var wScroll = $(this).scrollLeft();
 
   if (wScroll <= pContainerWidth) {
@@ -58,36 +57,61 @@ $(window).scroll(function(){
 
 });
 
-
 // Clicks en el menu
+
 $('section').horizon();
 
-$("header").on('click', '#inicio', function() { 
-  $(document).horizon('scrollTo', 0);
+
+$('nav.site-nav>ul').each(function(index) {
+  $(this).children('li').first().children('a').addClass('is-active').show();
 });
 
-$("header").on('click', '#patitas', function() { 
-  $(document).horizon('scrollTo', 1);
-});
+$('nav.site-nav>ul').on('click', 'li > a', function(event) {
+  if (!$(this).hasClass('is-active')) {
+    event.preventDefault();
+    var menuItems = $('nav.site-nav>ul');
+    var oID = $(this).attr("id");
+      if ( oID == 'inicio') {
+        $(document).horizon('scrollTo', 0)
+      }else if ( oID == 'patitas') {
+        $(document).horizon('scrollTo', 1)
+      }else if ( oID == 'adopciones') {
+        $(document).horizon('scrollTo', 2)
+      }else if ( oID == 'consejosUtiles') {
+        $(document).horizon('scrollTo', 3)
+      }else if ( oID == 'colaboraConNosotros') {
+        $(document).horizon('scrollTo', 4)
+      }else if ( oID == 'eventos') {
+        $(document).horizon('scrollTo', 5)
+      }else if ( oID == 'contacto') {
+        $(document).horizon('scrollTo', 6)
+      };
+    // console.log(oID);
+    // var inicio = 0;
+    // var patitas = 1;
+    // var adopciones = 2;
+    // var consejosUtiles = 3;
+    // var colaboraConNosotros = 4;
+    // var eventos = 5;
+    // var contacto = 6;
 
-$("header").on('click', '#adopciones', function() { 
-  $(document).horizon('scrollTo', 2);
-});
+    // $(document).horizon('scrollTo', function(){
+    //   if ( oID == 'inicio'){oID = 0};
+    //   if ( oID == 'patitas'){oID = 1};
+    //   if ( oID == 'adopciones'){oID = 2};
+    //   if ( oID == 'consejosUtiles'){oID = 3};
+    //   if ( oID == 'colaboraConNosotros'){oID = 4};
+    //   if ( oID == 'eventos'){oID = 5};
+    //   if ( oID == 'contacto'){oID = 6};
+    // });
+    
+    console.log(oID);
 
-$("header").on('click', '#consejosUtiles', function() {
-  $(document).horizon('scrollTo', 3);
-});
-
-$("header").on('click', '#colaboraConNosotros', function() {
-  $(document).horizon('scrollTo', 4);
-});
-
-$("header").on('click', '#eventos', function() {
-  $(document).horizon('scrollTo', 5);
-});
-
-$("header").on('click', '#contacto', function() {
-  $(document).horizon('scrollTo', 6);
+    menuItems.find('.is-active').removeClass('is-active');
+    $(this).addClass('is-active');
+  } else {
+    event.preventDefault();
+  }
 });
 
 
