@@ -2,7 +2,7 @@
 
 article {
   @include clearfix;
-  font-family: $sans-serif;
+  font-family: $text1;
   text-align: left;
   
   h1, h2, h3, p {
@@ -21,17 +21,21 @@ article {
     color: $base-font-color;
     line-height: $base-line-height;
     margin: 0
+
   }
 
   a {
-    color: $action-color;
+    color: $link-color;
     text-decoration: none;
+    &:hover{
+      color: orange;
+    }
   }
 
   .type {
     border-bottom: 2px solid;
     display: inline-block;
-    font-family: $sans-serif;
+    font-family: $text1;
     font-size: .7em;
     font-weight: 800;
     margin-bottom: 2em;
@@ -41,7 +45,7 @@ article {
   }
 
   h2 {
-    font-family: $serif;
+    font-family: $text1;
     font-size: 1.9em;
     font-weight: 700;
     margin-bottom: 0.3em;
@@ -52,7 +56,7 @@ article {
   }
 
   h3 {
-    font-family: $serif;
+    font-family: $text2;
     font-size: 1.3em;
     font-weight: 400;
     line-height: 1.25em;
@@ -78,7 +82,7 @@ article {
   }
 
   h4 {
-    font-family: $serif;
+    font-family: $text1;
     font-size: 1.4em;
     font-style: italic;
     font-weight: 400;
@@ -89,35 +93,37 @@ article {
 
   p.date {
     color: transparentize($base-font-color, 0.6);
-    font-family: $serif;
+    font-family: $text2;
     font-style: italic;
     margin-bottom: .3em;
   }
 
   p {
-    font-family: $sans-serif;
+    font-family: $text2;
     letter-spacing: 1;
     line-height: 1.55em;
     margin-bottom: 1.5em;
 
     span {
-      font-family: $serif;
+      font-family: $text2;
       font-size: 1.2em;
       font-style: italic;
+      color: white
     }
   }
   
   a.read-more {
+    position: relative;
     display: inline-block;
-    font-family: $sans-serif;
+    font-family: $text1;
     font-size: 0.8em;
     font-weight: 700;
     margin-left: 0.2em;
-    position: relative;
+    color: white;
     text-transform: uppercase;
 
     span {
-      font-family: $sans-serif;
+      font-family: $text1;
       font-size: 1.5em;
       font-style: normal;
       position: absolute;
@@ -131,8 +137,27 @@ article {
   }
 
   strong {
-    font-family: $serif;
+    font-family: $text1;
     font-size: 1.2em;
     font-style: italic;
+    &:before{
+      content:'" ';
+    }
+    &:after{
+      content:' "';
+    }
+  }
+  li{
+    list-style: none;
+    &:before{
+      content: '';
+      display: inline-block;
+      height: 0.8em;
+      width: 1em;
+      margin: 0.2em 0.5em 0 0;
+      background-image: url(../img/Patitas_Huella.png);
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+    }
   }
 }
