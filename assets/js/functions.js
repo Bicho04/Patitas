@@ -1,4 +1,4 @@
-
+$(document).ready(function () {
 var pContainerWidth = $('.home-graficos').width();
 
 
@@ -28,39 +28,11 @@ $(window).scroll(function(){
     });
 
    }
-
-
-  // if(wScroll > $('.adopciones').offset().left - $(window).width() ){
-
-  //   var offset = (Math.min(0, wScroll - $('.adopciones').offset().left + $(window).width() - 400 )).toFixed();
-  //   console.log( offset );
-
-  //   $('.en-adopciones>.parque>.parque-vereda>.perrito').css({
-  //     'transform': 'translate('+ offset +'px, 0px)'
-  //   });
-
-  //   $('.en-adopciones>.parque>.parque-vereda>.voluntario').css({
-  //     'transform': 'translate('+ Math.abs(offset) +'px, '+ offset * 0.2 +'px)'
-  //   });
- 
-  // }
-
-  // if(wScroll > $('.blog-posts').offset().top - $(window).height()){
-
-  //   var offset = (Math.min(0, wScroll - $('.blog-posts').offset().top +$(window).height() - 350)).toFixed();
-
-  //   $('.post-1').css({'transform': 'translate('+ offset +'px, '+ Math.abs(offset * 0.2) +'px)'});
-
-  //   $('.post-3').css({'transform': 'translate('+ Math.abs(offset) +'px, '+ Math.abs(offset * 0.2) +'px)'});
-
-  // }
-
 });
 
 // Clicks en el menu
 
 $('section').horizon();
-
 
 $('nav.site-nav>ul').each(function(index) {
   $(this).children('li').first().children('a').addClass('is-active').show();
@@ -138,5 +110,25 @@ $(function() {
 
   $(".modal-inner").on("click", function(e) {
     e.stopPropagation();
+  });
+});
+
+//TABS
+
+  $('.tabs').each(function() {
+    $(this).children('.tab-contenedor').first().children('a').addClass('is-active').next().addClass('is-open').show();
+  });
+  $('.tabs').on('click', '.tab-contenedor > a.tab-link', function(event) {
+    if (!$(this).hasClass('is-active')) {
+      event.preventDefault();
+      var accordionTabs = $(this).closest('.tabs');
+      accordionTabs.find('.is-open').removeClass('is-open').hide();
+
+      $(this).next().toggleClass('is-open').toggle();
+      accordionTabs.find('.is-active').removeClass('is-active');
+      $(this).addClass('is-active');
+    } else {
+      event.preventDefault();
+    }
   });
 });
