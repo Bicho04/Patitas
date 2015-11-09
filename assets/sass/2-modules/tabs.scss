@@ -1,0 +1,20 @@
+.tabs {
+  @include clearfix;
+  padding: 0;
+
+  .tab-contenedor {
+    list-style: none;
+    display: inline;
+  }
+
+  .is-active {
+    color: #ff0000;
+  }
+
+  .tab-contenido {
+    display: none;
+    width: 100%;
+    float: left;
+
+  }
+}
