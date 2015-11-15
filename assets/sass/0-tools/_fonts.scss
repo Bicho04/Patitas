@@ -2,7 +2,7 @@
 
 article {
   @include clearfix;
-  font-family: $text1;
+  font-family: $text2;
   text-align: left;
   
   h1, h2, h3, p {
@@ -138,13 +138,12 @@ article {
 
   strong {
     font-family: $text1;
-    font-size: 1.2em;
-    font-style: italic;
+    color: white
     &:before{
-      content:'" ';
+      content:'"';
     }
     &:after{
-      content:' "';
+      content:'"';
     }
   }
   li{

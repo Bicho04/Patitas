@@ -15,6 +15,7 @@
       Estas usando un nevegador <strong>viejo</strong>.
       Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> para mejorar tu experiencia.
     </p><![endif]-->
+    <div id="preload"><img src="assets/img/Patitas_LogoBlanco.png" alt="Logo Patitas blanco"></div>
     <section>
       <div class="contenido-wrap">
         <article>
@@ -61,8 +62,13 @@
       </div>
     </section>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.touchSwipe.js"></script>
     <script type="text/javascript" src="assets/js/jquery.horizonScroll.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.touchSwipe.js"></script>
     <script type="text/javascript" src="assets/js/functions.js"></script>
+    <script>
+      $(window).load(function() {
+      $("#preload").fadeOut('');
+      })
+    </script>
   </body>
 </html>
