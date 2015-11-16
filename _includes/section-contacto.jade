@@ -1,6 +1,7 @@
 section(data-role="section").contacto
 	.contenido-wrap
 		article
+			img.gatito(src="assets/img/Patitas_Gatito.png", alt="gatito")
 			h2 Contacto
 			.contacto-txt
 				p Aquí puedes contactar a Patitas
@@ -10,17 +11,18 @@ section(data-role="section").contacto
 
 			form.contactenos
 				p.input.nombre Nombre
-					input(type="text" name="Nombre") 
+					input.ico-nombre(type="text" name="Nombre") 
 				p.input.email Email
-					input(type="email" name="Email") 
+					input.ico-email2(type="email" name="Email") 
 				p.input.mensaje Mensaje
 					textarea
-				input.hueso(type="submit" value="Enviar")
+				input.hueso.ico-text(type="submit" value="Enviar")
 
 	//-GRAFICOS
-	.graficos.en-adopciones
+	.graficos.en-contacto
 		.parque
+			.parque-pasto
 			.parque-vereda
 				.perrito
-				.casa
 				.pelota
+				.casa

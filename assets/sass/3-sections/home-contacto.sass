@@ -5,6 +5,11 @@ section.contacto
 	.contacto-txt
 	p
 		margin: 0em
+	img.gatito
+		width: 140px
+		height: 140px
+		display: inline-block
+		float: right
 	form
 		margin: 1em auto
 		display: block
@@ -38,14 +43,27 @@ section.contacto
 		input.hueso
 			width: 120px
 			float: right
+			line-height: 2em
 
 
 
 	//-GRAFICOS
-	.graficos.en-adopciones
-		.parque
-			.parque-pasto
-				.arbol
-			.parque-vereda
-				.voluntario
-				.perrito
+	.en-contacto
+		.perrito
+			position: absolute
+			bottom: $vereda-1plano
+			left: 10em
+
+			background-position: 100% 0
+		.casa
+			position: absolute
+			bottom: $vereda-1plano
+			right: 8em
+
+			background-position: 100% 0
+		.pelota
+			position: absolute
+			bottom: $vereda-2plano
+			right: 20em
+
+			background-position: 100% 0

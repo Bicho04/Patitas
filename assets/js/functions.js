@@ -77,7 +77,7 @@ $('nav.site-nav>ul').on('click', 'li > a', function(event) {
     //   if ( oID == 'contacto'){oID = 6};
     // });
     
-    console.log(oID);
+    // console.log(oID);
 
     menuItems.find('.is-active').removeClass('is-active');
     $(this).addClass('is-active');
@@ -131,4 +131,8 @@ $(function() {
       event.preventDefault();
     }
   });
+});
+
+$(function() {
+    $('.tab-contenido').perfectScrollbar('destroy');
 });
