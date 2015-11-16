@@ -1,8 +1,10 @@
 section.eventos
 	position: relative
 	article
-
-		overflow: hidden
+		overflow-y: scroll
+		height: 55vh
+		.afiches
+			width: 100px
 		//ScrollBar
 		&::-webkit-scrollbar-track
 		  background-color: transparent
@@ -14,6 +16,11 @@ section.eventos
 		&::-webkit-scrollbar-thumb
 		  border-radius: 0.3em
 		  background-color: $primary-color
+		ul 
+			padding: 0 0 0 1em
+			margin: 0
+			li 
+				margin: 0
 	//- GRAFICOS
 	.en-eventos
 		.arbol
