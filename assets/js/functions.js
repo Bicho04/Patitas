@@ -89,14 +89,56 @@ $('nav.site-nav>ul').on('click', 'li > a', function(event) {
 
 //MODAL
 $(function() {
-  $("#modal-1").on("change", function() {
+  $(".modal-1").on("change", function() {
     if ($(this).is(":checked")) {
       $("body").addClass("modal-open");
     } else {
       $("body").removeClass("modal-open");
     }
   });
-  $("#historia").on("change", function() {
+  $(".modal-2").on("change", function() {
+    if ($(this).is(":checked")) {
+      $("body").addClass("modal-open");
+    } else {
+      $("body").removeClass("modal-open");
+    }
+  });
+  $(".modal-3").on("change", function() {
+    if ($(this).is(":checked")) {
+      $("body").addClass("modal-open");
+    } else {
+      $("body").removeClass("modal-open");
+    }
+  });
+  $(".modal-4").on("change", function() {
+    if ($(this).is(":checked")) {
+      $("body").addClass("modal-open");
+    } else {
+      $("body").removeClass("modal-open");
+    }
+  });
+  $(".modal-5").on("change", function() {
+    if ($(this).is(":checked")) {
+      $("body").addClass("modal-open");
+    } else {
+      $("body").removeClass("modal-open");
+    }
+  });
+  $(".modal-6").on("change", function() {
+    if ($(this).is(":checked")) {
+      $("body").addClass("modal-open");
+    } else {
+      $("body").removeClass("modal-open");
+    }
+  });
+  $(".modal-7").on("change", function() {
+    if ($(this).is(":checked")) {
+      $("body").addClass("modal-open");
+    } else {
+      $("body").removeClass("modal-open");
+    }
+  });
+  $(".modal-8").on("change", function() {
     if ($(this).is(":checked")) {
       $("body").addClass("modal-open");
     } else {

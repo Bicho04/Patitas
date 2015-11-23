@@ -59,30 +59,23 @@
 .ico-paper-plane:before {
 	content: "\f1d8";
 }
-.ico-send:before {
-	content: "\f1d8";
-}
 .ico-facebook-official:before {
 	content: "\f230";
 }
-.ico-email2:before {
-	content: "\f199";
-	// color: red;
-	// z-index: 50;
-	// position: absolute;
-	// left: 0;
+.ico-email2:after {
+	content: "\1f4e7";
+	color: #fff;
+	width: 500px;
 }
-.ico-nombre:before {
-	content: "\f007";
-	// color: red;
-	// z-index: 50;
-	// position: absolute;
-	// left: 0;
+.ico-nombre:after {
+	content: "\1f464";
+	color: #fff;
 }
-.ico-text:before {
-	content: "\f0f6";
-	// color: red;
-	// z-index: 50;
-	// position: absolute;
-	// left: 0;
+.ico-text:after {
+	content: "\1f5b9";
+	color: #fff;
+}
+.ico-send:before {
+	content: "\f1d8";
+	color: #fff;
 }

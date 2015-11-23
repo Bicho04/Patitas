@@ -4,8 +4,23 @@ section(data-role="section").eventos
 			h2: strong Ayúdanos a Mejorar la Calidad de Vida de Nuestras Patitas 
 			p Gracias a la realización de eventos Patitas Felices tiene la oportunidad de recaudar fondos.  Si tenes alguna sugerencia en la realización de eventos o dudas para saber en qué podes ayudar comuníquese o envíanos un correo. 
 			p: a(href="Contacto").ico-email patitasfelicesparaguay@gmail.com
-			img.afiche.right(src="assets/img/afiches/Afiche-03.png", alt="")
-			img.afiche.right(src="assets/img/afiches/Afiche-04.png", alt="")
+
+			figure.modal.right
+				label(for="modal-3")
+					.modal-trigger: img.afiche(src="assets/img/afiches/Afiche-03.png", alt="")
+				input.modal-state(id="modal-3" type="checkbox")
+				.modal-fade-screen 
+					.modal-inner 
+						.modal-close(for="modal-3")
+						img(src="assets/img/afiches/Afiche-03.png", alt="")
+			figure.modal.right
+				label(for="modal-4")
+					.modal-trigger: img.afiche(src="assets/img/afiches/Afiche-04.png", alt="")
+				input.modal-state(id="modal-4" type="checkbox")
+				.modal-fade-screen 
+					.modal-inner 
+						.modal-close(for="modal-4")
+						img(src="assets/img/afiches/Afiche-04.png", alt="")
 			p Algunos de nuestros eventos realizados
 			ul
 				li: a(href="Facebook-Ferias") Patitas Ferias

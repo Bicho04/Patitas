@@ -10,15 +10,46 @@ section(data-role="section").adopciones
 						p Adoptar un animal es una decisión muy importante, significa comprometerse durante toda su vida.
 						p Una adopción responsable no solo es brindar cariño y alimento, también es vacunar, desparasitar, esterilizar, castrar como método de control sobre las enfermedades, reproducción no deseado y dedicar tiempo.
 						p: a(href="#") Estos son algunos de nuestras patitas rescatadas y puestos en adopción.
-						img.afiche(src="assets/img/afiches/Afiche-07.png", alt="")
-						img.afiche(src="assets/img/afiches/Afiche-06.png", alt="")
-						img.afiche(src="assets/img/afiches/Afiche-05.png", alt="")
+						figure.modal.left 
+							label(for="modal-7")
+								.modal-trigger: img.afiche(src="assets/img/afiches/Afiche-07.png", alt="")
+							input.modal-state(id="modal-7" type="checkbox")
+							.modal-fade-screen 
+								.modal-inner 
+									.modal-close(for="modal-7")
+									img(src="assets/img/afiches/Afiche-07.png", alt="")
+						figure.modal.left
+							label(for="modal-5")
+								.modal-trigger: img.afiche(src="assets/img/afiches/Afiche-05.png", alt="")
+							input.modal-state(id="modal-5" type="checkbox")
+							.modal-fade-screen 
+								.modal-inner 
+									.modal-close(for="modal-5")
+									img(src="assets/img/afiches/Afiche-05.png", alt="")
+						figure.modal.left
+							label(for="modal-6")
+								.modal-trigger: img.afiche(src="assets/img/afiches/Afiche-06.png", alt="")
+							input.modal-state(id="modal-6" type="checkbox")
+							.modal-fade-screen 
+								.modal-inner 
+									.modal-close(for="modal-6")
+									img(src="assets/img/afiches/Afiche-06.png", alt="")						
+						
+						
 				.tab-contenedor
 					a(href="#").tab-link.hueso Antes de adoptar	
 					div.tab-contenido
 						h2 Antes de adoptar
 						ul: p Es importante que tengas en cuenta antes de adoptar una patita:
-							img.afiche.right(src="assets/img/afiches/Afiche-08.png", alt="")
+							figure.modal 
+								label(for="modal-8")
+									.modal-trigger: img.afiche.right(src="assets/img/afiches/Afiche-08.png", alt="")
+								input.modal-state(id="modal-8" type="checkbox")
+								.modal-fade-screen 
+									.modal-inner 
+										.modal-close(for="modal-8")
+										img(src="assets/img/afiches/Afiche-08.png", alt="")
+							
 							li El espacio disponible de tu casa 
 							li El tiempo que tengas para brindarle compañía 
 							li Actividad física y cuidado de tu patita 
@@ -30,15 +61,26 @@ section(data-role="section").adopciones
 					a(href="#").tab-link.hueso Requisitos	
 					div.tab-contenido
 						h2 Requisitos de adopción
+
 						ul
-							img.afiche.right(src="assets/img/afiches/Afiche-09.png", alt="")
+							figure.modal 
+								label(for="modal-9")
+									.modal-trigger: img.afiche.right(src="assets/img/afiches/Afiche-09.png", alt="")
+								input.modal-state(id="modal-9" type="checkbox")
+								.modal-fade-screen 
+									.modal-inner 
+										.modal-close(for="modal-9")
+										img(src="assets/img/afiches/Afiche-09.png", alt="")
+							
+						
+							
 							li Ser mayor de edad 
 							li Presentar cédula de identidad y fotocopia 
 							li Tener una vivienda segura y con patio 
 							li Contar con una solvencia económica 
 							li Tener un veterinario de cabecera 
 							li Firmar el contrato de adopción 
-						a(href="#").ico-descargar Contrato de adopción
+						a(href="http://www.patitas.paradata.com.py/ContratoAdopcionPatitas2015.pdf").ico-descargar Contrato de adopción
 
 	//-GRAFICOS
 	.graficos.en-adopciones

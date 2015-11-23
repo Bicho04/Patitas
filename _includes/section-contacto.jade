@@ -13,12 +13,12 @@ section(data-role="section").contacto
 
 			form.contactenos
 				p.input.nombre Nombre
-					input.ico-nombre(type="text" name="Nombre") 
+					span.ico-nombre: input(type="text" name="Nombre") 
 				p.input.email Email
-					input.ico-email2(type="email" name="Email") 
+					span.ico-email2: input(type="email" name="Email") 
 				p.input.mensaje Mensaje
-					textarea
-				input.hueso.ico-text(type="submit" value="Enviar")
+					span.ico-text: textarea
+				span.ico-send: input.hueso(type="submit" value="Enviar")
 
 	//-GRAFICOS
 	.graficos.en-contacto
