@@ -28,7 +28,7 @@ article {
     color: $link-color;
     text-decoration: none;
     &:hover{
-      color: orange;
+      color: $primary-color;
     }
   }
 
@@ -106,7 +106,7 @@ article {
 
     span {
       font-size: 1.2em;
-      color: white
+      color: white;
     }
   }
   
@@ -134,14 +134,14 @@ article {
     width: 3em;
   }
 
-  strong {
+  p strong {
     font-family: $text1;
-    color: white
-    &:before{
-      content:'"';
-    }
+    color: white;
     &:after{
-      content:'"';
+      content:' "';
+    }
+    &:before{
+      content:'" ';
     }
   }
   li{
