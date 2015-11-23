@@ -8,8 +8,8 @@ section(data-role="section").colaboraConNosotros
 						h2 Aportaciones Económicas
 						p No tenes tiempo y quieres ayudar a patitas hacete socio lo puedes hacer a través de un giro Tigo al
 						figure.icono.png4
-						p.ico-cel 0982 526 894
-						p.ico-banco al número de cuenta No 3.406.843 Banco Visión 
+						p: span.ico-cel 0982 526 894
+						p: span.ico-banco al número de cuenta No 3.406.843 Banco Visión 
 						p Existen muchas formas de ayudar a patitas, pero sin la ayuda económica la verdad no podríamos salir adelante. Gracias a las cuotas de los socios, se pueden cubrir con los gastos del refugio.
 						h3 
 				.tab-contenedor
@@ -62,10 +62,31 @@ section(data-role="section").colaboraConNosotros
 					div.tab-contenido
 						h2 Apadrinamiento
 						p Puedes ayudar a una patita con una cuota mensual apadrinando a una patita.
-						p Gracias por comprometerse con Patitas Felices que al no poder tener más animales, optan por colaborar con nosotros. 
-						img.afiche(src="assets/img/afiches/Afiche-01.png", alt="")
-						img.afiche(src="assets/img/afiches/Afiche-02.png", alt="")
-						img.afiche(src="assets/img/afiches/Afiche-10.png", alt="")
+						p Gracias por comprometerse con Patitas Felices que al no poder tener más animales, optan por colaborar con nosotros.
+						figure.modal.left
+								label(for="modal-1")
+									.modal-trigger: img.afiche(src="assets/img/afiches/Afiche-01.png", alt="")
+								input.modal-state(id="modal-1" type="checkbox")
+								.modal-fade-screen 
+									.modal-inner 
+										.modal-close(for="modal-1")
+										img(src="assets/img/afiches/Afiche-01.png", alt="")
+						figure.modal.left
+								label(for="modal-2")
+									.modal-trigger: img.afiche(src="assets/img/afiches/Afiche-02.png", alt="")
+								input.modal-state(id="modal-2" type="checkbox")
+								.modal-fade-screen 
+									.modal-inner 
+										.modal-close(for="modal-2")
+										img(src="assets/img/afiches/Afiche-02.png", alt="")
+						figure.modal.left
+								label(for="modal-10")
+									.modal-trigger: img.afiche(src="assets/img/afiches/Afiche-10.png", alt="")
+								input.modal-state(id="modal-10" type="checkbox")
+								.modal-fade-screen 
+									.modal-inner 
+										.modal-close(for="modal-10")
+										img(src="assets/img/afiches/Afiche-10.png", alt="")
 						
 						//- img(url="img/#") Fotos de madrina falta queda pendiente será afiches
 

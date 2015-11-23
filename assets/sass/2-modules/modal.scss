@@ -1,23 +1,27 @@
 .modal {
-
+  margin: 0;
+  padding: 0;
+  &.right{
+    float: right;
+  }
+  &.left{
+    float: left;
+  }
   label {
     cursor: pointer;
     margin-bottom: 0;
   }
 
   label img {
-    border-radius: $modal-trigger-image-width / 2;
+    // border-radius: $modal-trigger-image-width / 2;
     display: block;
-    max-width: $modal-trigger-image-width;
+    max-width: 100%;
   }
 
   .modal-state {
     display: none;
   }
 
-  .modal-trigger {
-    padding: 0.8em 1em;
-  }
 
   .modal-fade-screen { // overlay
     @include transition(opacity 0.25s ease);
@@ -30,7 +34,7 @@
     z-index: 99999999999;
 
     @include media($large-screen) {
-      padding-top: 10em;
+      padding-top: 0;
     }
 
     .modal-bg {
@@ -72,20 +76,20 @@
     border-radius: $base-border-radius;
     margin-top: 0;
     margin: auto;
-    max-height: 95%;
+    max-height: 100%;
     overflow: auto;
     padding: $modal-padding / 2;
     position: relative;
-    width: 95%;
+    width: 100%;
 
     @include media($medium-screen) {
-      max-height: 70%;
+      height: 100%;
       padding: $modal-padding;
-      width: 60%;
+      width: 100%;
     }
 
     @include media($large-screen) {
-      width: 50%;
+      width: 100%;
     }
 
     h1 {
@@ -99,7 +103,12 @@
       color: $base-font-color;
       line-height: $base-line-height;
     }
-
+    img{
+      display: block;
+      margin: auto;
+      width: 100%;
+      max-width: 450px;
+    }
     .modal-intro {
       margin-bottom: 1em;
     }

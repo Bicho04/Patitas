@@ -23,40 +23,54 @@ section.contacto
 			li 
 				margin: 0
 		span
-			color: #111
+			color: #fff
 			position: relative
 			display: inline-block
 			font-size: 0.9em
+			font-style: normal
+
+		img.gatito
+			width: 140px
+			height: 140px
+			display: inline-block
+			float: right
 
 	.contacto-txt
-	p
-		margin: 0em
-	img.gatito
-		width: 140px
-		height: 140px
-		display: inline-block
-		float: right
-	form
+		p
+			margin: 0em
+	form.contactenos
 		margin: 1em auto
 		display: block
 		.input
 			font-family: $text1
 			color: $primary-color
-			display: inline-block
 			&:before
-				content: '*'
+				content: '* '
+		[class^="ico-"], 
+		[class*=" ico-"]
+			display: block
+			position: relative
+			&:after
+				top: 0.25em
+				left: 0.3em
+				font-size: 1.25em
+				width: 32px
+				position: absolute
+
 		.nombre,
 		.email
 			width: 50%
 			float: left
 			padding: 0 1em
-			display: inline-block
 			font-size: 1.15em
+			position relative
 			input
 				height: 2em
 		.mensaje
 			width: 100%
 			padding: 0 1em
+		
+
 		input,
 		textarea
 			background-color: $primary-color
@@ -65,14 +79,25 @@ section.contacto
 			display: block
 			width: 100%
 			color: #FFF
-			padding-left: 0.5em
+			padding-left: 2em
 		textarea
 			width: 100%
-		input.hueso
-			width: 120px
+		.ico-send
 			float: right
+			padding: 0
+			margin: 0
+			&:before
+				position: absolute
+				z-index: 10
+				top: 1.25em
+				left: 1em
+				font-size: 1.25em
+		.hueso
+			width: 120px
+			padding-left: 0.5em
 			line-height: 2em
-
+		input:before
+			color: #fff
 
 
 	//-GRAFICOS
